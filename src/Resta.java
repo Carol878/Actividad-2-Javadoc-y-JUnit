@@ -32,6 +32,4 @@ public class Resta
         resAcumulado = acumulado - resAcumulado;
         return resAcumulado;
     }
-
-
 }

@@ -1,12 +1,11 @@
 import java.util.Scanner;
 public class Main {
 
-
     // Metodo elegir opción para swich principal
     public static String elegirOpcion(Scanner sc) {
         String opciones;
         System.out.println("¿Qué tipo de operación quieres realizar?");
-        System.out.println("1 Suma, 2 Resta, 3 Multiplicar, 4 Dividir, 5 Potencia, 6 Raiz cuadrada, 7 Salir");
+        System.out.println("1 Suma, 2 Resta, 3 Multiplicar, 4 Dividir, 5 Potencia, 6 Raíz cuadrada, 7 Salir");
         opciones = sc.next();
         return opciones;
     }
@@ -24,7 +23,7 @@ public class Main {
         numero = sc.nextDouble();
         return numero;
     }
-    // Metodo para elegir que tipo de rest realizar 2º swicht
+    // Metodo para elegir que tipo de resta realizar 2º swicht
     public static void menuTipoResta(Scanner sc, Resta resta){
         String opciones;
         System.out.println("¿Qué tipo de resta quieres realizar?");
@@ -56,7 +55,7 @@ public class Main {
                 System.out.println("el resultado es: " +resta.restaAcumulado(numero8));
                 break;
             default:
-                System.out.println("Opcion no valida");
+                System.out.println("Opción no valida");
         }
     }
     public static void main(String[] args) {
@@ -65,14 +64,15 @@ public class Main {
         String opciones;
         Resta resta = new Resta();
         do {
-            // Igualo para dar un valor a opciones
+            /* Igualo y le doy un valor a opciones. La creo de tipo String para que el usuario sólo pueda interactuar
+            con las opciones dadas y no de error cualquier otra cosa que escriba*/
             opciones = elegirOpcion(sc);
             switch (opciones) {
                 case "1":
                     //TODO: Suma;
                     break;
                 case "2":
-                    // Llamo a el tipo de resta que quiere utilizar el usuario
+                    // Llamo al tipo de resta que quiere utilizar el usuario
                     menuTipoResta(sc, resta);
                     break;
                 case "3":
@@ -91,9 +91,10 @@ public class Main {
                     System.out.println("Salir");
                     break;
                 default:
-                    System.out.println("Opcion no valida");
+                    System.out.println("Opción no valida");
             }
         }
+        // Si el usuario elige cualquier cosa que no sea un número del 1 al 7 vuelve a preguntar que quiere hacer.
         while (!opciones.equals("7"));
     }
 }
