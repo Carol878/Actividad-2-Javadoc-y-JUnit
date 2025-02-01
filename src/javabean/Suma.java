@@ -22,10 +22,10 @@ public class Suma {
     private int acumulado = 0;
 
     /**
-     * El primer método tiene de entrada dos valores:
-     * @param sumando1
-     * @param sumando2
-     * @return la suma de ambos numeros enteros.
+     * El primer método tiene de entrada dos valores enteros:
+     * @param sumando1 Primer número a sumar.
+     * @param sumando2 Segundo número a sumar.
+     * @return La suma de ambos numeros.
      */
 
     public int sumar(int sumando1,int sumando2) {
@@ -34,10 +34,10 @@ public class Suma {
     }
 
     /**
-     * El segundo método tiene de entrada dos valores:
-     * @param sumando1
-     * @param sumando2
-     * @return la suma de ambos numeros reales.
+     * El segundo método tiene de entrada dos valores reales:
+     * @param sumando1 Primer número a sumar.
+     * @param sumando2 Segundo número a sumar.
+     * @return La suma de ambos numeros.
      */
 
     public double sumar(double sumando1, double sumando2) {
@@ -46,11 +46,11 @@ public class Suma {
     }
 
     /**
-     * El tercer método tiene de entrada tres valores:
-     * @param sumando1
-     * @param sumando2
-     * @param sumando3
-     * @return la suma de los numeros reales.
+     * El tercer método tiene de entrada tres valores reales:
+     * @param sumando1 Primer número a sumar.
+     * @param sumando2 Segundo número a sumar.
+     * @param sumando3 Tercer número a sumar.
+     * @return La suma de los 3 numeros.
      */
 
     public double sumar(double sumando1,double sumando2,double sumando3) {
@@ -59,10 +59,10 @@ public class Suma {
     }
 
     /**
-     * El cuarto método tiene de entrada solo 1 valor. EL valor de acumulado comienza en cero
+     * El cuarto método tiene de entrada solo 1 valor entero. El valor del acumulado comienza en cero
      * y se le irán añadiendo valores cada vez que entre un parámetro en la calculadora.
-     * @param sumando1
-     * @return la suma de ambos numeros entero.
+     * @param sumando1 Números que van sumandose al valor acumulado.
+     * @return La suma de los diferentes numeros.
      */
 
     public int sumar(int sumando1) {
