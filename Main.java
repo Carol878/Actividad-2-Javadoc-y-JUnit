@@ -1,6 +1,8 @@
 import java.util.Scanner;
 public class Main {
 
+
+    // Metodo elegir opción para swich principal
     public static String elegirOpcion(Scanner sc) {
         String opciones;
         System.out.println("¿Qué tipo de operación quieres realizar?");
@@ -8,7 +10,21 @@ public class Main {
         opciones = sc.next();
         return opciones;
     }
-    public static int ()
+    // Función que pide al usuario un numero, para enteros (este lo podéis reutilizar en vuestro switch)
+    public static int obtenerNumerodeUsuarioEntero(Scanner sc) {
+        int numero;
+        System.out.println("Dame un número");
+        numero = sc.nextInt();
+        return numero;
+    }
+    // Función que pide al usuario un numero, para reales (este lo podéis reutilizar en vuestro switch)
+    public static double obtenerNumerodeUsuarioReales(Scanner sc) {
+        double numero;
+        System.out.println("Dame un número");
+        numero = sc.nextDouble();
+        return numero;
+    }
+    // Metodo para elegir que tipo de rest realizar 2º swicht
     public static void menuTipoResta(Scanner sc, Resta resta){
         String opciones;
         System.out.println("¿Qué tipo de resta quieres realizar?");
@@ -16,39 +32,40 @@ public class Main {
         opciones = sc.next();
         switch (opciones) {
             case "1":
-                System.out.println("Dame 2 números reales");
-                double numero1 = sc.nextDouble();
-                double numero2 = sc.nextDouble();
-                System.out.println(resta.restaReales(numero1, numero2));
+                // Llamo a la función 2 veces para que el usuario me de 2 números y los guardo.
+                double numero1 = obtenerNumerodeUsuarioReales(sc);
+                double numero2 = obtenerNumerodeUsuarioReales(sc);
+                System.out.println("el resultado es: " +resta.restaReales(numero1, numero2));
                 break;
             case "2":
-                System.out.println("Dame 2 números enteros");
-                int numero3 = sc.nextInt();
-                int numero4 = sc.nextInt();
-                System.out.println(resta.restaEnteros(numero3, numero4));
+                // Llamo a la función 2 veces para que el usuario me de 2 números y los guardo.
+                int numero3 = obtenerNumerodeUsuarioEntero(sc);
+                int numero4 = obtenerNumerodeUsuarioEntero(sc);
+                System.out.println("el resultado es: " +resta.restaEnteros(numero3, numero4));
                 break;
             case "3":
-                System.out.println("Dame 3 números reales");
-                double numero5 = sc.nextDouble();
-                double numero6 = sc.nextDouble();
-                double numero7 = sc.nextDouble();
-                System.out.println(resta.restaReales(numero5, numero6, numero7));
+                // Llamo a la función 3 veces para que el usuario me de 3 números y los guardo.
+                double numero5 = obtenerNumerodeUsuarioReales(sc);
+                double numero6 = obtenerNumerodeUsuarioReales(sc);
+                double numero7 = obtenerNumerodeUsuarioReales(sc);
+                System.out.println("el resultado es: " +resta.restaReales(numero5, numero6, numero7));
                 break;
             case "4":
-                System.out.println("Dame 1 número real");
-                double numero8 = sc.nextDouble();
-                System.out.println(resta.restaAcumulado(numero8));
+                // Llamo a la función 1 vez para que el usuario me de 1 número y lo guardo.
+                double numero8 = obtenerNumerodeUsuarioReales(sc);
+                System.out.println("el resultado es: " +resta.restaAcumulado(numero8));
                 break;
             default:
                 System.out.println("Opcion no valida");
         }
     }
     public static void main(String[] args) {
+        // Inicialización de variables
         Scanner sc = new Scanner(System.in);
         String opciones;
         Resta resta = new Resta();
         do {
-            //igualo para dar un valor a opciones
+            // Igualo para dar un valor a opciones
             opciones = elegirOpcion(sc);
             switch (opciones) {
                 case "1":
