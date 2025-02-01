@@ -28,7 +28,7 @@ public class Suma {
      * @return la suma de ambos numeros enteros.
      */
 
-    public int sumarEnteros(int sumando1,int sumando2) {
+    public int sumar(int sumando1,int sumando2) {
 
         return sumando1 + sumando2;
     }
@@ -40,7 +40,7 @@ public class Suma {
      * @return la suma de ambos numeros reales.
      */
 
-    public double sumarReales(double sumando1, double sumando2) {
+    public double sumar(double sumando1, double sumando2) {
 
         return sumando1 + sumando2;
     }
@@ -53,7 +53,7 @@ public class Suma {
      * @return la suma de los numeros reales.
      */
 
-    public double sumarReales2(double sumando1,double sumando2,double sumando3) {
+    public double sumar(double sumando1,double sumando2,double sumando3) {
 
         return sumando1 + sumando2 + sumando3;
     }
@@ -65,7 +65,7 @@ public class Suma {
      * @return la suma de ambos numeros entero.
      */
 
-    public int sumarAcumulado(int sumando1) {
+    public int sumar(int sumando1) {
         acumulado += sumando1;
         return acumulado;
     }

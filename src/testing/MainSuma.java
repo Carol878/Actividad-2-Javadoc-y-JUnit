@@ -20,7 +20,7 @@ public class MainSuma {
                 int sumando1= leer.nextInt();
                 System.out.println("Introduce el segundo sumando");
                 int sumando2= leer.nextInt();
-                int resultado = suma.sumarEnteros(sumando1, sumando2);
+                int resultado = suma.sumar(sumando1, sumando2);
                 System.out.println("El resultado es: " + resultado);
             break;
             case 2:
@@ -28,7 +28,7 @@ public class MainSuma {
                 double sumando3= leer.nextDouble();
                 System.out.println("Introduce el segundo sumando");
                 double sumando4= leer.nextDouble();
-                double resultado2 = suma.sumarReales(sumando3, sumando4);
+                double resultado2 = suma.sumar(sumando3, sumando4);
                 System.out.println("El resultado es: " + resultado2);
             break;
             case 3:
@@ -38,14 +38,14 @@ public class MainSuma {
                 double sumando6= leer.nextDouble();
                 System.out.println("Introduce el tercer sumando");
                 double sumando7= leer.nextDouble();
-                double resultado3 = suma.sumarReales2(sumando5, sumando6,sumando7);
+                double resultado3 = suma.sumar(sumando5, sumando6,sumando7);
                 System.out.println("El resultado es: " + resultado3);
             break;
             case 4:
                 System.out.println("Introduce el sumando");
                 int sumando8 = leer.nextInt();
                 while (sumando8 != -1){
-                    resultado = suma.sumarAcumulado(sumando8);
+                    resultado = suma.sumar(sumando8);
                     System.out.println("El resultado es: " + resultado);
                     System.out.println("Introduce el sumando");
                     sumando8= leer.nextInt();
