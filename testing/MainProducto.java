@@ -47,8 +47,7 @@ public class MainProducto {
                 System.out.println("Introduce el exponente");
                 int expo = leer.nextInt();
                 if (expo >= 0) {
-                    resultado = producto.potencia(base,expo);
-                    System.out.println("El resultado es: " + resultado);
+                    System.out.println("El resultado es: " + producto.potencia(base,expo));
                 }else
                     System.out.println("No es posible realizar la operacion");
                 break;
