@@ -1,5 +1,7 @@
 package javabean;
 
+import java.util.Scanner;
+
 /**
  * La clase {@code RaizCuadrada} proporciona un metodo estático para calcular raíces cuadradas de un número que recibe como parametro.
  *
@@ -18,12 +20,34 @@ public class RaizCuadrada {
      * @throws ArithmeticException en caso de recibir 0.
      */
 
-    public static double calcularRaizCuadrada(double numero) {
+    private static double calcularRaizCuadrada(double numero) {
 
         if (numero == 0) {
             throw new ArithmeticException();
         }
         return Math.sqrt(numero);
+    }
+
+    /**
+     * Muestra un menu interactivo donde el usuario introduce un número real y haciendo uso de @see calcularRaizCuadrada(double), calcula su raíz cuadrada y la muestra por pantalla.
+     *
+     * Este metodo no recibe ningún parametro ni devuelve ningun valor, se limita a interactuar con el usuario a traves de la consola.
+     *
+     * @implNote Este metodo implementa un objetio de tipo {@link Scanner} para leer el numeor introducido por el usuario
+     */
+
+    public static void menuTipoRaizCuadrada(){
+
+        Scanner scLeerTeclado = new Scanner(System.in);
+        double numero;
+
+        System.out.println("Escribe el número del que deseas calcular la raíz cuadrada: ");
+        numero=scLeerTeclado.nextDouble();
+
+        System.out.println("La raíz cuadrada de : " + numero +", es igual a : " + calcularRaizCuadrada(numero));
+
+        scLeerTeclado.close();
+
     }
 
 }
