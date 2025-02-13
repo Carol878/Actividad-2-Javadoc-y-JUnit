@@ -19,7 +19,7 @@ El trabajo se realiza de manera colaborativa, utilizando Git y GitHub para gesti
 **Autor**: Antonio Jose García Molina(https://github.com/AntonioJGM)
 ### Clase `Potencia`
 **Autor**: Juan Moreno Garoz(https://github.com/GarozJ)
-### Clase `División`
+### Clase `Raíz Cuadrada`
 **Autor**: Pablo Granados Rúa(https://github.com/PabloGR047)
 
 
