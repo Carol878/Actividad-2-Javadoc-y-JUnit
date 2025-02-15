@@ -1,3 +1,5 @@
+package javabean;
+
 /**
  * Clase que realiza sumas dentro de una aplicación de calculadora.
  * @author Nahir Carolina Torres
@@ -7,11 +9,7 @@
 public class Resta
 {
     // Variable para guardar acumulados
-    double resAcumulado =0;
-
-    // Creo constructor vacio, para poder llamar a la función.
-    public Resta (){
-    }
+    private static double  resAcumulado =0;
 
     /**
      * Creo función resta de 2 reales.
@@ -19,7 +17,7 @@ public class Resta
      * @param realB segundo parámetro con el que se realizará la resta.
      * @return resultado de la resta.
      */
-    double restaReales (double realA, double realB)
+    public static double restaReales(double realA, double realB)
     {
         double resultado = realA - realB;
         return resultado;
@@ -31,7 +29,7 @@ public class Resta
      * @param enteroB segundo parámetro con el que se realizará la resta.
      * @return resultado de la resta.
      */
-    int restaEnteros (int enteroA, int enteroB)
+    public static int restaEnteros (int enteroA, int enteroB)
     {
         int resultado = enteroA - enteroB;
         return resultado;
@@ -44,18 +42,18 @@ public class Resta
      * @param realC tercer parámetro con el que se realizará la resta.
      * @return resultado de la resta.
      */
-    double restaReales (double realA, double realB, double realC)
+    public static double restaReales (double realA, double realB, double realC)
     {
         double resultado = realA - realB - realC;
         return resultado;
     }
 
     /**
-     * Resta con valor acumulados, es decir, cada vez que se use se irá acumulando el valor en la variable resAcumulado.
+     * javabean.Resta con valor acumulados, es decir, cada vez que se use se irá acumulando el valor en la variable resAcumulado.
      * @param acumulado valor acumulado.
      * @return resultado de la resta de los valores acumulados.
      */
-    double restaAcumulado (double acumulado)
+    public static double restaAcumulado (double acumulado)
     {
         resAcumulado = acumulado - resAcumulado;
         return resAcumulado;

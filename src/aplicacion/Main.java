@@ -1,6 +1,7 @@
 package aplicacion;
 
 import javabean.RaizCuadrada;
+import javabean.Resta;
 import javabean.Suma;
 
 import java.sql.SQLOutput;
@@ -36,6 +37,7 @@ public class Main {
                 case 1: menuTipoSuma(scLeerTeclado);
                     break;
                 case 2:
+                    menuTipoResta(scLeerTeclado);
                     break;
                 case 3:
                     break;
@@ -152,6 +154,47 @@ public class Main {
             default: System.out.println("Opcion incorrecta");
         }
     }
+    /**
+     * Muestra un menu interactivo donde el usuario introduce el número que se pide (entero o real) y haciendo uso de los diferentes métodos restar.
+     * @param sc Para no crear un objeto scanner en cada menú, se crea arriba y se utiliza en cada uno.
+     */
+    public static void menuTipoResta(Scanner sc){
+        String opciones;
+        System.out.println("¿Qué tipo de resta quieres realizar?");
+        System.out.println("1 Resta de dos reales, 2 Resta de dos enteros, 3 Resta de tres reales, 4 Resta acumulados");
+        opciones = sc.next();
+        switch (opciones) {
+            case "1":
+                System.out.println("Introduce el primer número");
+                double numero1 = sc.nextDouble();
+                System.out.println("Introduce el segundo número");
+                double numero2 = sc.nextDouble();
+                System.out.println("el resultado es: " + Resta.restaReales(numero1, numero2));
+                break;
+            case "2":
+                System.out.println("Introduce el primer número");
+                int numero3 = sc.nextInt();
+                System.out.println("Introduce el segundo número");
+                int numero4 = sc.nextInt();
+                System.out.println("el resultado es: " + Resta.restaEnteros(numero3, numero4));
+                break;
+            case "3":
+                System.out.println("Introduce el primer número");
+                double numero5 = sc.nextDouble();
+                System.out.println("Introduce el segundo número");
+                double numero6 = sc.nextDouble();
+                System.out.println("Introduce el tercer número");
+                double numero7 = sc.nextDouble();
+                System.out.println("el resultado es: " + Resta.restaReales(numero5, numero6, numero7));
+                break;
+            case "4":
+                double numero8 = sc.nextDouble();
+                System.out.println("el resultado es: " + Resta.restaAcumulado(numero8));
+                break;
+            default:
+                System.out.println("Opción no valida");
+        }
     }
+}
 
 
