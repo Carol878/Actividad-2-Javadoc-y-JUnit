@@ -17,7 +17,7 @@ public class Producto_MCJ {
      * @return el producto de multiplo1 y multiplo2.
      */
 
-    public double producto2reales (double multiplo1, double multiplo2){
+    public static double producto2reales (double multiplo1, double multiplo2){
         return multiplo1 * multiplo2;
     }
 
@@ -28,7 +28,7 @@ public class Producto_MCJ {
      * @return el producto de multiplo1 y multiplo2.
      */
 
-    public int producto2enteros ( int multiplo3, int multiplo4){
+    public static int producto2enteros ( int multiplo3, int multiplo4){
         return multiplo3 * multiplo4;
     }
 
@@ -40,7 +40,7 @@ public class Producto_MCJ {
      * @return el producto de multiplo5, multiplo6 y multiplo7.
      */
 
-    public double producto3reales (double multiplo5, double multiplo6, double multiplo7){
+    public static double producto3reales (double multiplo5, double multiplo6, double multiplo7){
         return multiplo5 * multiplo6 * multiplo7;
     }
 
@@ -51,7 +51,7 @@ public class Producto_MCJ {
      * @return la potencia con base y exponente
      */
 
-    public double potencia (int base,int expo){
+    public static double potencia (int base,int expo){
         return Math.pow(base,expo);
     }
 
@@ -61,7 +61,7 @@ public class Producto_MCJ {
      * @param producto Clase que llama a los métodos de esta clase.
      */
 
-    public void menuTipoProducto(Scanner leer, Producto_MCJ producto){
+    public static void menuTipoProducto(Scanner leer, Producto_MCJ producto){
         System.out.println("Elige el tipo de producto que quieres hacer de las siguientes opciones:");
         System.out.println("Introduce 1 para multiplicar dos números reales");
         System.out.println("Introduce 2 para multiplicar dos números enteros");
