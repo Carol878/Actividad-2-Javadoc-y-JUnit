@@ -25,17 +25,16 @@ public class Potencia {
      * Metodo principal que permite al usuario ingresar una base y un exponente
      * para calcular su potencia utilizando el metodo {@code calcularPotencia}.
      *
-     * @param args Argumentos de la línea de comandos (no utilizados).
      */
     public static void menuTipoPotencia (Scanner leer) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner leer = new Scanner(System.in);
         Potencia potencia = new Potencia();
 
         System.out.print("Escribe la base): ");
-        int base = scanner.nextInt();
+        int base = leer.nextInt();
 
         System.out.print("Escribe el exponente: ");
-        int exponente = scanner.nextInt();
+        int exponente = leer.nextInt();
 
         double resultado = potencia.calcularPotencia(base, exponente);
         System.out.println("Resultado: " + resultado);
