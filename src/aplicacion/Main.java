@@ -44,6 +44,7 @@ public class Main {
                     menuTipoDivision(scLeerTeclado);
                     break;
                 case 5:
+                    menuTipoPotencia(scLeerTeclado);
                     break;
                 case 6:
                     menuTipoRaizCuadrada(scLeerTeclado);
@@ -287,6 +288,23 @@ public class Main {
                     break;
             }
         } while (opcion != 4);
+    }
+    /**
+     * Metodo principal que permite al usuario ingresar una base y un exponente
+     * para calcular su potencia utilizando el metodo {@code calcularPotencia}.
+     *
+     */
+    public static void menuTipoPotencia (Scanner leer) {
+
+        System.out.print("Escribe la base: ");
+        int base = leer.nextInt();
+
+        System.out.print("Escribe el exponente: ");
+        int exponente = leer.nextInt();
+
+        double resultado = Potencia.calcularPotencia(base, exponente);
+        System.out.println("Resultado: " + resultado);
+
     }
 }
 
