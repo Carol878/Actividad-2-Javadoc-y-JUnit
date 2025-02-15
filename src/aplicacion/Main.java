@@ -1,6 +1,7 @@
 package aplicacion;
 
 import javabean.RaizCuadrada;
+import javabean.Suma;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;
@@ -32,7 +33,7 @@ public class Main {
             eleccion = pintarMenu(scLeerTeclado);
 
             switch (eleccion) {
-                case 1:
+                case 1: menuTipoSuma(scLeerTeclado);
                     break;
                 case 2:
                     break;
@@ -103,7 +104,56 @@ public class Main {
 
 
         }
+    /**
+     * Menú que recibe el número que se introduce.
+     * @param leer Número que entra mediante Scanner para elegir la opcion del switch
+     */
 
+    public static void menuTipoSuma(Scanner leer){
+        System.out.println("¿Qué tipo se suma quieres realizar?");
+        System.out.println("¿1 Suma de dos enteros, 2 Suma de dos reales, " +
+                "3 Suma de tres reales y 4 Suma de forma acumulativa");
+        int opcion = leer.nextInt();
+        switch (opcion) {
+            case 1:
+                System.out.println("Introduce el primer número");
+                int sumando1 = leer.nextInt();
+                System.out.println("Introduce el segundo número");
+                int sumando2 = leer.nextInt();
+                int resultado = Suma.sumar(sumando1, sumando2);
+                System.out.println("El resultado es: " + resultado);
+                break;
+            case 2:
+                System.out.println("Introduce el primer número");
+                double sumando3 = leer.nextDouble();
+                System.out.println("Introduce el primer número");
+                double sumando4 = leer.nextDouble();
+                double resultado2 = Suma.sumar(sumando3, sumando4);
+                System.out.println("El resultado es: " + resultado2);
+                break;
+            case 3:
+                System.out.println("Introduce el primer número");
+                double sumando5 = leer.nextDouble();
+                System.out.println("Introduce el segundo número");
+                double sumando6 = leer.nextDouble();
+                System.out.println("Introduce el tercer número");
+                double sumando7 = leer.nextDouble();
+                double resultado3 = Suma.sumar(sumando5, sumando6,sumando7);
+                System.out.println("El resultado es: " + resultado3);
+                break;
+            case 4:
+                System.out.println("Introduce el sumando");
+                int sumando8 = leer.nextInt();
+                while (sumando8 != -1){
+                    resultado = Suma.sumar(sumando8);
+                    System.out.println("El resultado es: " + resultado);
+                    System.out.println("Introduce el sumando");
+                    sumando8= leer.nextInt();
+                }
+                break;
+            default: System.out.println("Opcion incorrecta");
+        }
+    }
     }
 
 
