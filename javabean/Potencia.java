@@ -27,7 +27,7 @@ public class Potencia {
      *
      * @param args Argumentos de la línea de comandos (no utilizados).
      */
-    public static void main(String[] args) {
+    public static void menuTipoPotencia (Scanner leer) {
         Scanner scanner = new Scanner(System.in);
         Potencia potencia = new Potencia();
 
