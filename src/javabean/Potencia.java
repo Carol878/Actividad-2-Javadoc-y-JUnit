@@ -1,4 +1,5 @@
 package javabean;
+
 import java.util.Scanner;
 /**
  * La clase {@code Potencia} proporciona un metodo para calcular la potencia de un número.
