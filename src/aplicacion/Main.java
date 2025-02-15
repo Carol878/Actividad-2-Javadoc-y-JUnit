@@ -1,5 +1,6 @@
 package aplicacion;
 
+import javabean.Producto_MCJ;
 import javabean.RaizCuadrada;
 import javabean.Resta;
 import javabean.Suma;
@@ -40,6 +41,7 @@ public class Main {
                     menuTipoResta(scLeerTeclado);
                     break;
                 case 3:
+                    menuTipoProducto(scLeerTeclado);
                     break;
                 case 4:
                     break;
@@ -193,6 +195,59 @@ public class Main {
                 break;
             default:
                 System.out.println("Opción no valida");
+        }
+    }
+
+    /**
+     * Menú para la clase producto que recibe el número que se introduce.
+     * @param leer Número que entra mediante Scanner para elegir la opcion del switch
+     */
+    public static void menuTipoProducto(Scanner leer) {
+        System.out.println("Elige el tipo de producto que quieres hacer de las siguientes opciones:");
+        System.out.println("Introduce 1 para multiplicar dos números reales");
+        System.out.println("Introduce 2 para multiplicar dos números enteros");
+        System.out.println("Introduce 3 para multiplicar tres números reales");
+        System.out.println("Introduce 4 para obtener la potencia de dos numeros, base y exponente");
+        int opcion = leer.nextInt();
+        switch (opcion) {
+            case 1:
+                System.out.println("Introduce el primer multiplo real");
+                double multiplo1 = leer.nextDouble();
+                System.out.println("Introduce el segundo multiplo real");
+                double multiplo2 = leer.nextDouble();
+                double resultado = Producto_MCJ.producto2reales(multiplo1, multiplo2);
+                System.out.println("El resultado es: " + resultado);
+                break;
+            case 2:
+                System.out.println("Introduce el primer multiplo entero");
+                int multiplo3 = leer.nextInt();
+                System.out.println("Introduce el segundo multiplo entero");
+                int multiplo4 = leer.nextInt();
+                int resultado1 = Producto_MCJ.producto2enteros(multiplo3, multiplo4);
+                System.out.println("El resultado es: " + resultado1);
+                break;
+            case 3:
+                System.out.println("Introduce el primer multiplo real");
+                double multiplo5 = leer.nextDouble();
+                System.out.println("Introduce el segundo multiplo real");
+                double multiplo6 = leer.nextDouble();
+                System.out.println("Introduce el tercer multiplo real");
+                double multiplo7 = leer.nextDouble();
+                double resultado3 = Producto_MCJ.producto3reales(multiplo5, multiplo6, multiplo7);
+                System.out.println("El resultado es: " + resultado3);
+                break;
+            case 4:
+                System.out.println("Introduce la base");
+                int base = leer.nextInt();
+                System.out.println("Introduce el exponente");
+                int expo = leer.nextInt();
+                if (expo >= 0) {
+                    System.out.println("El resultado es: " + Producto_MCJ.potencia(base, expo));
+                } else
+                    System.out.println("No es posible realizar la operacion");
+                break;
+            default:
+                System.out.println("Opcion incorrecta");
         }
     }
 }
