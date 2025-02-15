@@ -2,7 +2,7 @@ package testing;
 
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-// import javabean.Suma;
+import javabean.Suma;
 
 import java.util.ArrayList;
 
@@ -19,7 +19,7 @@ public class SumaTest {
      */
     @Test
     public void testSumaEnteros() {
-        // int actual = Suma.sumar(4, 5);
+        int actual = Suma.sumar(4, 5);
         int esperado = 9;
         Assertions.assertEquals(esperado, actual);
     }
@@ -30,7 +30,7 @@ public class SumaTest {
      */
     @Test
     public void testSumaReales() {
-        // double actual = Suma.sumar(6.77, 5.92);
+        double actual = Suma.sumar(6.77, 5.92);
         double esperado = 12.69;
         Assertions.assertEquals(esperado, actual);
     }
@@ -41,7 +41,7 @@ public class SumaTest {
      */
     @Test
     public void testSumaTresReales() {
-        // double actual = Suma.sumar(6.77, -5.92, 5.5);
+        double actual = Suma.sumar(6.77, -5.92, 5.5);
         double esperado = 6.35;
         Assertions.assertEquals(esperado, actual);
     }
@@ -60,7 +60,7 @@ public class SumaTest {
         lista.add(13);
 
         for (Integer integer : lista) {
-           // actual = Suma.sumar(integer);
+           actual = Suma.sumar(integer);
         }
 
         double esperado = 100;
