@@ -18,7 +18,7 @@ public class Suma {
      * Se ininicaliza la variable acumulado a 0 para el cuarto método sumarAcumulado().
      */
 
-
+    private static int acumulado=0;
 
     /**
      * El primer método tiene de entrada dos valores enteros:
@@ -65,7 +65,6 @@ public class Suma {
      */
 
     public static int sumar(int sumando1) {
-        int acumulado = 0;
         acumulado += sumando1;
         return acumulado;
     }
