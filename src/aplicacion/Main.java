@@ -1,9 +1,6 @@
 package aplicacion;
 
-import javabean.Producto_MCJ;
-import javabean.RaizCuadrada;
-import javabean.Resta;
-import javabean.Suma;
+import javabean.*;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;
@@ -44,6 +41,7 @@ public class Main {
                     menuTipoProducto(scLeerTeclado);
                     break;
                 case 4:
+                    menuTipoDivision(scLeerTeclado);
                     break;
                 case 5:
                     break;
@@ -199,8 +197,8 @@ public class Main {
     }
 
     /**
-     * Menú para la clase producto que recibe el número que se introduce.
-     * @param leer Número que entra mediante Scanner para elegir la opcion del switch
+     * Muestra un menu interactivo donde el usuario introduce el número que se pide (entero o real) y haciendo uso de los diferentes métodos producto.
+     * @param leer Para no crear un objeto scanner en cada menú, se crea arriba y se utiliza en cada uno.
      */
     public static void menuTipoProducto(Scanner leer) {
         System.out.println("Elige el tipo de producto que quieres hacer de las siguientes opciones:");
@@ -249,6 +247,46 @@ public class Main {
             default:
                 System.out.println("Opcion incorrecta");
         }
+    }
+
+    /**
+     * Muestra un menu interactivo donde el usuario introduce el número que se pide (entero o real) y haciendo uso de los diferentes métodos dividir.
+     * @param leer Para no crear un objeto scanner en cada menú, se crea arriba y se utiliza en cada uno.
+     */
+
+    public static void menuTipoDivision(Scanner leer) {
+        int opcion = 0;
+        do {
+            System.out.println("Que división quieres hacer: ");
+            System.out.println("1. Dividir Reales");
+            System.out.println("2. Dividir Enteros");
+            System.out.println("3. Inverso");
+            System.out.println("4. Exit");
+
+            opcion = leer.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Dame el numerador: ");
+                    double numeradorReal = leer.nextDouble();
+                    System.out.println("Dame el denominador: ");
+                    double denominadorReal = leer.nextDouble();
+                    System.out.println("El resultado es: " + Division.dividirReales(numeradorReal,denominadorReal));
+                    break;
+                case 2:
+                    System.out.println("Dame el numerador: ");
+                    int numeradorEntero = leer.nextInt();
+                    System.out.println("Dame el denominador: ");
+                    int denominadorEntero = leer.nextInt();
+                    System.out.println("El resultado es: " + Division.dividirEnteros(numeradorEntero,denominadorEntero));
+                    break;
+                case 3:
+                    System.out.println("Dame el número: ");
+                    double numero = leer.nextDouble();
+                    System.out.println("El resultado es: " + Division.inverso(numero));
+                    break;
+            }
+        } while (opcion != 4);
     }
 }
 

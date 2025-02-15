@@ -31,7 +31,7 @@ public class Division {
      * @return el resultado de la división.
      * @throws ArithmeticException si el denominador es cero.
      */
-    public static double dividirEnteros (int numeradorEntero, int denominadorEntero) {
+    public static double dividirEnteros (double numeradorEntero, double denominadorEntero) {
         if (denominadorEntero == 0) {
             throw new ArithmeticException("No se puede dividir por cero.");
         }
@@ -50,48 +50,5 @@ public class Division {
         }
         return 1 / numero;
     }
-
-
-    /**
-     * Muestra un menu interactivo donde el usuario introduce el número que se pide (entero o real) y haciendo uso de los diferentes métodos dividir.
-     * @param sc Para no crear un objeto scanner en cada menú, se crea arriba y se utiliza en cada uno.
-     */
-
-    public static void menuTipoDivision() {
-        Scanner sc = new Scanner(System.in);
-        int opcion = 0;
-        do {
-            System.out.println("Que división quieres hacer: ");
-            System.out.println("1. Dividir Reales");
-            System.out.println("2. Dividir Enteros");
-            System.out.println("3. Inverso");
-            System.out.println("4. Exit");
-
-            opcion = sc.nextInt();
-
-            switch (opcion) {
-                case 1:
-                    System.out.println("Dame el numerador: ");
-                    double numeradorReal = sc.nextInt();
-                    System.out.println("Dame el denominador: ");
-                    double denominadorReal = sc.nextInt();
-                    System.out.println(Division.dividirReales(numeradorReal,denominadorReal));
-                    break;
-                case 2:
-                    System.out.println("Dame el numerador: ");
-                    int numeradorEntero = sc.nextInt();
-                    System.out.println("Dame el denominador: ");
-                    int denominadorEntero = sc.nextInt();
-                    System.out.println(Division.dividirEnteros(numeradorEntero,denominadorEntero));
-                    break;
-                case 3:
-                    System.out.println("Dame el número: ");
-                    double numero = sc.nextInt();
-                    System.out.println(Division.inverso(numero));
-                    break;
-            }
-        } while (opcion != 4);
-    }
-
 }
 
