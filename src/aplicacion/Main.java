@@ -88,9 +88,7 @@ public class Main {
 
     /**
      * Muestra un menu interactivo donde el usuario introduce un número real y haciendo uso de @see calcularRaizCuadrada(double), calcula su raíz cuadrada y la muestra por pantalla.
-     *
-     * Este metodo no recibe ningún parametro ni devuelve ningun valor, se limita a interactuar con el usuario a traves de la consola.
-     *
+     * @param scLeerTeclado Para no crear un objeto scanner en cada menú, se crea arriba y se utiliza en cada uno.
      */
 
     private static void menuTipoRaizCuadrada(Scanner scLeerTeclado) {
@@ -105,8 +103,8 @@ public class Main {
 
         }
     /**
-     * Menú que recibe el número que se introduce.
-     * @param leer Número que entra mediante Scanner para elegir la opcion del switch
+     * Muestra un menu interactivo donde el usuario introduce el número que se pide (entero o real) y haciendo uso de los diferentes métodos sumar sobrecargados.
+     * @param leer Para no crear un objeto scanner en cada menú, se crea arriba y se utiliza en cada uno.
      */
 
     public static void menuTipoSuma(Scanner leer){
