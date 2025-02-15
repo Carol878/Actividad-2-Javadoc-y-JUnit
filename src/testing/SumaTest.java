@@ -7,9 +7,8 @@ import javabean.Suma;
 import java.util.ArrayList;
 
 /**
- * Clase de pruebas unitarias para la clase {@link }.
  * Esta clase contiene métodos de prueba para verificar el correcto funcionamiento
- * de los métodos de suma implementados en la clase {@link }.
+ * de los métodos de suma implementados en la clase {@link Suma}.
  */
 public class SumaTest {
 
