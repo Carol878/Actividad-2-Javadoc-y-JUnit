@@ -28,7 +28,6 @@ public class Potencia {
      *
      */
     public static void menuTipoPotencia (Scanner leer) {
-        Scanner leer = new Scanner(System.in);
         Potencia potencia = new Potencia();
 
         System.out.print("Escribe la base): ");
@@ -40,6 +39,6 @@ public class Potencia {
         double resultado = potencia.calcularPotencia(base, exponente);
         System.out.println("Resultado: " + resultado);
 
-        scanner.close();
+        leer.close();
     }
 }
