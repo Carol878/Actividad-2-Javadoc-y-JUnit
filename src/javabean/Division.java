@@ -53,28 +53,11 @@ public class Division {
 
 
     /**
-     * Muestra un menú de opciones para realizar operaciones de división.
-     * El menú permite al usuario seleccionar entre dividir números reales, dividir números enteros o calcular el inverso de un número.
-     * Dependiendo de la opción seleccionada, el método solicita los valores correspondientes al usuario e imprime el resultado de la operación.
-     *
-     * El menú se repite hasta que el usuario elija la opción de salida (4).
-     *
-     * Las operaciones de división y cálculo del inverso son delegadas a los métodos estáticos de la clase {@link Division}.
-     *
-     * <p><strong>Opciones del menú:</strong></p>
-     * <ul>
-     *   <li>1. Dividir Reales: Realiza una división entre dos números reales.</li>
-     *   <li>2. Dividir Enteros: Realiza una división entre dos números enteros.</li>
-     *   <li>3. Inverso: Calcula el inverso de un número real.</li>
-     *   <li>4. Exit: Termina la ejecución del menú.</li>
-     * </ul>
-     *
-     * @see Division#dividirReales(double, double)
-     * @see Division#dividirEnteros(int, int)
-     * @see Division#inverso(double)
+     * Muestra un menu interactivo donde el usuario introduce el número que se pide (entero o real) y haciendo uso de los diferentes métodos dividir.
+     * @param sc Para no crear un objeto scanner en cada menú, se crea arriba y se utiliza en cada uno.
      */
 
-    public static void menuDivision() {
+    public static void menuTipoDivision() {
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
         do {
