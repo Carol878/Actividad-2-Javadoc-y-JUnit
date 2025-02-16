@@ -237,9 +237,9 @@ public class Main {
                 break;
             case 4:
                 System.out.println("Introduce la base");
-                int base = leer.nextInt();
+                double base = leer.nextDouble();
                 System.out.println("Introduce el exponente");
-                int expo = leer.nextInt();
+                double expo = leer.nextDouble();
                 if (expo >= 0) {
                     System.out.println("El resultado es: " + Producto_MCJ.potencia(base, expo));
                 } else
