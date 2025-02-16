@@ -55,6 +55,10 @@ public class Resta
      */
     public static double restaAcumulado (double acumulado)
     {
+        if (acumulado < 0)
+        {
+            acumulado = -acumulado;
+        }
         resAcumulado =  resAcumulado - acumulado;
         return resAcumulado;
     }
