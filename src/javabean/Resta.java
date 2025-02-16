@@ -1,7 +1,7 @@
 package javabean;
 
 /**
- * Clase que realiza sumas dentro de una aplicación de calculadora.
+ * Clase que realiza resta dentro de una aplicación de calculadora.
  * @author Nahir Carolina Torres
  * @version Version 1.0
  */
