@@ -60,6 +60,8 @@ public class ProductoTest {
         assert (resultado == 1.4142135623730951);
         resultado = Producto_MCJ.potencia(6, 0);
         assert (resultado == 1);
+        resultado = Producto_MCJ.potencia(2, -3);
+        assert (resultado == 0.125);
     }
 
 

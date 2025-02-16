@@ -240,10 +240,7 @@ public class Main {
                 double base = leer.nextDouble();
                 System.out.println("Introduce el exponente");
                 double expo = leer.nextDouble();
-                if (expo >= 0) {
-                    System.out.println("El resultado es: " + Producto_MCJ.potencia(base, expo));
-                } else
-                    System.out.println("No es posible realizar la operacion");
+                System.out.println("El resultado es: " + Producto_MCJ.potencia(base, expo));
                 break;
             default:
                 System.out.println("Opcion incorrecta");
