@@ -49,13 +49,13 @@ public class Resta
     }
 
     /**
-     * javabean.Resta con valor acumulados, es decir, cada vez que se use se irá acumulando el valor en la variable resAcumulado.
+     * javabean.Resta con valores acumulados, es decir, cada vez que se use se irá acumulando el valor en la variable resAcumulado.
      * @param acumulado valor acumulado.
      * @return resultado de la resta de los valores acumulados.
      */
     public static double restaAcumulado (double acumulado)
     {
-        resAcumulado = acumulado - resAcumulado;
+        resAcumulado =  resAcumulado - acumulado;
         return resAcumulado;
     }
 }
