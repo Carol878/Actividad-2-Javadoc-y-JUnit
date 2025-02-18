@@ -46,12 +46,12 @@ public class Producto_MCJ {
 
     /**
      * Potencia con dos parametros de entrada (base y exponente) y devuelve el resultado.
-     * @param base numero entero como base de la potencia
-     * @param expo numero entero como exponente de la potencia
+     * @param base numero real como base de la potencia
+     * @param expo numero real como exponente de la potencia
      * @return la potencia con base y exponente
      */
 
-    public static double potencia (int base,int expo){
+    public static double potencia (double base,double expo){
         return Math.pow(base,expo);
     }
 

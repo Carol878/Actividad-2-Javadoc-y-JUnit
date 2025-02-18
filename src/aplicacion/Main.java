@@ -241,13 +241,10 @@ public class Main {
                 break;
             case 4:
                 System.out.println("Introduce la base");
-                int base = leer.nextInt();
+                double base = leer.nextDouble();
                 System.out.println("Introduce el exponente");
-                int expo = leer.nextInt();
-                if (expo >= 0) {
-                    System.out.println("El resultado es: " + Producto_MCJ.potencia(base, expo));
-                } else
-                    System.out.println("No es posible realizar la operacion");
+                double expo = leer.nextDouble();
+                System.out.println("El resultado es: " + Producto_MCJ.potencia(base, expo));
                 break;
             default:
                 System.out.println("Opcion incorrecta");
