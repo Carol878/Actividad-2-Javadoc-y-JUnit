@@ -1,5 +1,8 @@
 package javabean;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /**
  * Clase que realiza resta dentro de una aplicación de calculadora.
  * @author Nahir Carolina Torres
@@ -9,7 +12,8 @@ package javabean;
 public class Resta
 {
     // Variable para guardar acumulados
-    private static double  resAcumulado =0;
+    private static int  resAcumulado =0;
+    private static int numRestas;
 
     /**
      * Creo función resta de 2 reales.
@@ -50,12 +54,16 @@ public class Resta
 
     /**
      * javabean.Resta con valor acumulados, es decir, cada vez que se use se irá acumulando el valor en la variable resAcumulado.
-     * @param acumulado valor acumulado.
+     * @param acumulados Array con valores acumulados.
      * @return resultado de la resta de los valores acumulados.
      */
-    public static double restaAcumulado (double acumulado)
-    {
-        resAcumulado = acumulado - resAcumulado;
+
+    public static int restaAcumulado (int [] acumulados){
+        for (int i = 0; i < acumulados.length; i++)
+        {
+        resAcumulado = resAcumulado - acumulados[i];
+        }
         return resAcumulado;
     }
+
 }
