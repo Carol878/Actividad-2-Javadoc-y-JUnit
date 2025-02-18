@@ -9,7 +9,7 @@ package javabean;
 public class Resta
 {
     // Variable para guardar acumulados
-    private static double  resAcumulado =0;
+    private static int  resAcumulado =0;
 
     /**
      * Creo función resta de 2 reales.
@@ -49,17 +49,17 @@ public class Resta
     }
 
     /**
-     * javabean.Resta con valores acumulados, es decir, cada vez que se use se irá acumulando el valor en la variable resAcumulado.
-     * @param acumulado valor acumulado.
+     * javabean.Resta con valor acumulados, es decir, cada vez que se use se irá acumulando el valor en la variable resAcumulado.
+     * @param acumulados Array con valores acumulados.
      * @return resultado de la resta de los valores acumulados.
      */
-    public static double restaAcumulado (double acumulado)
-    {
-        if (acumulado < 0)
+
+    public static int restaAcumulado (int [] acumulados){
+        for (int i = 0; i < acumulados.length; i++)
         {
-            acumulado = -acumulado;
+            resAcumulado = resAcumulado - acumulados[i];
         }
-        resAcumulado =  resAcumulado - acumulado;
         return resAcumulado;
     }
+
 }
