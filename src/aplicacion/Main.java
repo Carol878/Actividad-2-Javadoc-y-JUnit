@@ -187,9 +187,14 @@ public class Main {
                 System.out.println("el resultado es: " + Resta.restaReales(numero5, numero6, numero7));
                 break;
             case "4":
-                System.out.println("Introduce un número");
-                double numero8 = sc.nextDouble();
-                System.out.println("el resultado es: " + Resta.restaAcumulado(numero8));
+                System.out.println("Dime cúantos números quieres restar: ");
+                int numero8 = sc.nextInt();
+                int[] acumulados = new int[numero8];
+                for (int i = 0; i < numero8; i++) {
+                    System.out.println("Dime un número: ");
+                    acumulados[i] = sc.nextInt();
+                }
+                System.out.println("el resultado es: " + Resta.restaAcumulado(acumulados));
                 break;
             default:
                 System.out.println("Opción no valida");
