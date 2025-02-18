@@ -1,8 +1,5 @@
 package javabean;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 /**
  * Clase que realiza resta dentro de una aplicación de calculadora.
  * @author Nahir Carolina Torres
@@ -13,7 +10,6 @@ public class Resta
 {
     // Variable para guardar acumulados
     private static int  resAcumulado =0;
-    private static int numRestas;
 
     /**
      * Creo función resta de 2 reales.
