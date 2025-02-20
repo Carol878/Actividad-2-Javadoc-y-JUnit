@@ -1,11 +1,9 @@
 package aplicacion;
-
 import javabean.*;
-
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-/**
+/*
  * En esta aplicación la clase main es un menú principal que permite ver y seleccionar todas las diferentes operaciones que ofrece la
  * calculadora y según la selección redirige a un menú diferente para cada tipo de operación.
  *
@@ -189,15 +187,21 @@ public class Main {
                 System.out.println("el resultado es: " + Resta.restaReales(numero5, numero6, numero7));
                 break;
             case "4":
-                double numero8 = sc.nextDouble();
-                System.out.println("el resultado es: " + Resta.restaAcumulado(numero8));
+                System.out.println("Dime cúantos números quieres restar: ");
+                int numero8 = sc.nextInt();
+                int[] acumulados = new int[numero8];
+                for (int i = 0; i < numero8; i++) {
+                    System.out.println("Dime un número: ");
+                    acumulados[i] = sc.nextInt();
+                }
+                System.out.println("el resultado es: " + Resta.restaAcumulado(acumulados));
                 break;
             default:
                 System.out.println("Opción no valida");
         }
     }
 
-    /**
+    /*
      * Muestra un menu interactivo donde el usuario introduce el número que se pide (entero o real) y haciendo uso de los diferentes métodos producto.
      * @param leer Para no crear un objeto scanner en cada menú, se crea arriba y se utiliza en cada uno.
      */
@@ -237,13 +241,10 @@ public class Main {
                 break;
             case 4:
                 System.out.println("Introduce la base");
-                int base = leer.nextInt();
+                double base = leer.nextDouble();
                 System.out.println("Introduce el exponente");
-                int expo = leer.nextInt();
-                if (expo >= 0) {
-                    System.out.println("El resultado es: " + Producto_MCJ.potencia(base, expo));
-                } else
-                    System.out.println("No es posible realizar la operacion");
+                double expo = leer.nextDouble();
+                System.out.println("El resultado es: " + Producto_MCJ.potencia(base, expo));
                 break;
             default:
                 System.out.println("Opcion incorrecta");
