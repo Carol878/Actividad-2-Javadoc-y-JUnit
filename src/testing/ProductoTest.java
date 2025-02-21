@@ -1,5 +1,4 @@
 package testing;
-import javabean.Suma;
 import org.junit.jupiter.api.Test;
 import javabean.Producto_MCJ;
 
