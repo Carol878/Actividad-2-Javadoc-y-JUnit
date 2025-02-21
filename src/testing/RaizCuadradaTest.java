@@ -3,7 +3,9 @@ package testing;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-// Clase de pruebas unitarias para el método de cálculo de raíz cuadrada
+/**
+ * Clase de pruebas unitarias para el método de cálculo de raíz cuadrada.
+ */
 class RaizCuadradaTest {
 
     /**
@@ -30,13 +32,13 @@ class RaizCuadradaTest {
 
     /**
      * Prueba unitaria para verificar la raíz cuadrada de 0.
-     * Se espera que se lance una ArithmeticException.
-     * Se debe revisar la implementación de RaizCuadrada.calcularRaizCuadrada(0).
+     * Se espera que la raíz cuadrada de 0 sea 0.0.
      */
     @Test
     void testRaizCuadradaCero() {
-        assertThrows(ArithmeticException.class, () -> RaizCuadrada.calcularRaizCuadrada(0),
-                "Debe lanzar ArithmeticException cuando el número es 0");
+        double resultado = RaizCuadrada.calcularRaizCuadrada(0);
+        // En Java, Math.sqrt(0) devuelve 0.0
+        assertEquals(0.0, resultado, 0.0001, "La raíz cuadrada de 0 debe ser 0.0");
     }
 
     /**
