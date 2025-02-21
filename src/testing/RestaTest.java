@@ -52,21 +52,14 @@ public class RestaTest {
     }
 
     /**
-     * Prueba unitaria para verificar la resta acumulada de una lista de números reales.
-     * Se espera que la resta acumulada de los números 100,49.50,25.50,25 sea igual a 0.
+     * Prueba unitaria para verificar la resta acumulada de una lista de números enteros.
+     * Se espera que la resta acumulada de los números 100,49,26 y 25 sea igual a 0.
      */
     @Test
-    public void restaRealesAcumulada() {
-        double resultadoEsperado = 0;
-        double resultadoActual = 0;
-        resultadoActual = Resta.restaAcumulado(100);
-        System.out.println(resultadoActual);
-        resultadoActual = Resta.restaAcumulado(49.50);
-        System.out.println(resultadoActual);
-        resultadoActual = Resta.restaAcumulado(25.50);
-        System.out.println(resultadoActual);
-        resultadoActual = Resta.restaAcumulado(25);
-        System.out.println(resultadoActual);
+    public void restaAcumulada() {
+        int resultadoEsperado = -200;
+        int [] parametros = new int [] {100,49,26,25};
+        int resultadoActual = Resta.restaAcumulado(parametros);
         Assertions.assertEquals(resultadoEsperado, resultadoActual);
 
     }
