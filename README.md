@@ -12,7 +12,7 @@ El trabajo se realiza de manera colaborativa, utilizando Git y GitHub para gesti
 ### Clase `Suma`
 **Autor**: Cristina Sanz Alonso (https://github.com/CristinaSanzAlonso)
 ### Clase `javabean.Resta`
-**Autor**: Nahir Carolina Torres(https://github.com/CarolT878)
+**Autor**: Nahir Carolina Torres(https://github.com/Carol878)
 ### Clase `Multiplicación`
 **Autor**: Marta Cruz Jiménez(https://github.com/CruzMarta)
 ### Clase `División`
